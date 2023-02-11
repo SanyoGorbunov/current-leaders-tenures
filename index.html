@@ -28,6 +28,20 @@
                     (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
             }
 
+            function calcColors(rStart, gStart, bStart, rEnd, gEnd, bEnd, min, max, value) {
+                var percent = (value - min) / (max - min);
+
+                var resultRed = Math.floor(rStart + percent * (rEnd - rStart));
+                var resultGreen = Math.floor(gStart + percent * (gEnd - gStart));
+                var resultBlue = Math.floor(bStart + percent * (bEnd - bStart));
+
+                return [ resultRed, resultGreen, resultBlue ]; 
+            }
+
+            function getColor(r, g, b) {
+                return r * 256 * 256 + g * 256 + b;
+            }
+
             function getCountryHeatMap() {
                 
                 var heatmap = []
@@ -47,7 +61,7 @@
                         var months = monthDiff(earliestDate, new Date());
                         heatmap.push({
                             id: country.code,
-                            value: months > 180 ? 180 : months,
+                            value: months,
                             years: Math.round(months / 12.0 * 10) / 10
                         })
                     }
@@ -89,9 +103,23 @@
             polygonSeries.set("heatRules", [{
                 target: polygonSeries.mapPolygons.template,
                 dataField: "value",
-                min: am5.color(0xff621f),
-                max: am5.color(0x661f00),
-                key: "fill"
+                customFunction: function (sprite, min, max, value) {
+                    if (value < 180) {
+
+                        var [ r, g, b ] = calcColors(0, 204, 0, 255, 153, 0, 0, 120, value)
+                        var color = getColor(r, g, b)
+
+                        sprite.set("fill", am5.color(color));
+                    }
+                    else {
+
+                        value = value > 240 ? 240 : value;
+                        var [ r, g, b ] = calcColors(255, 153, 0, 153, 0, 51, 120, 240, value)
+                        var color = getColor(r, g, b)
+
+                        sprite.set("fill", am5.color(color));
+                    }
+                }
             }]);
 
             polygonSeries.data.setAll(getCountryHeatMap());
