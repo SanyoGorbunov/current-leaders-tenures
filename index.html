@@ -6,6 +6,7 @@
         <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
         <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
         <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+        <script src="./countries.js"></script>
 
         <style type="text/css">
             body {
@@ -21,6 +22,13 @@
         <div id="chartdiv"></div>
 
         <script>
+            function getRandomCountryHeatMap() {
+                return countries.map(country => ({
+                    id: country.code,
+                    value: Math.floor(Math.random() * 100)
+                }))
+            }
+
             // Create root and chart
             var root = am5.Root.new("chartdiv"); 
 
@@ -40,18 +48,25 @@
             var polygonSeries = chart.series.push(
                 am5map.MapPolygonSeries.new(root, {
                     geoJSON: am5geodata_worldLow,
-                    exclude: ["AQ"]
+                    exclude: ["AQ"],
+                    valueField: "value",
+                    calculateAggregates: true
                 })
             );
 
             polygonSeries.mapPolygons.template.setAll({
-                tooltipText: "{name}",
-                interactive: true
+                tooltipText: "{name} {value}"
             });
 
-            polygonSeries.mapPolygons.template.states.create("hover", {
-                fill: am5.color(0x677935)
-            });
+            polygonSeries.set("heatRules", [{
+                target: polygonSeries.mapPolygons.template,
+                dataField: "value",
+                min: am5.color(0xff621f),
+                max: am5.color(0x661f00),
+                key: "fill"
+            }]);
+
+            polygonSeries.data.setAll(getRandomCountryHeatMap());
         </script>
     </body>
 </html>
