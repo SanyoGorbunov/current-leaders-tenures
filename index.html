@@ -23,11 +23,38 @@
         <div id="chartdiv"></div>
 
         <script>
-            function getRandomCountryHeatMap() {
-                return countries.map(country => ({
-                    id: country.code,
-                    value: Math.floor(Math.random() * 100)
-                }))
+            function monthDiff(dateFrom, dateTo) {
+                return dateTo.getMonth() - dateFrom.getMonth() + 
+                    (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+            }
+
+            function getCountryHeatMap() {
+                
+                var heatmap = []
+
+                countries.forEach(country => {
+                    var records = leaders.filter(leaderRecord => leaderRecord.state === country.name);
+
+                    if (records.length > 0) {
+
+                        var earliestDate = new Date()
+                        records.forEach(record => {
+                            if (new Date(record.date) < earliestDate) {
+                                earliestDate = new Date(record.date);
+                            }
+                        });
+
+                        var months = monthDiff(earliestDate, new Date());
+                        heatmap.push({
+                            id: country.code,
+                            value: months > 180 ? 180 : months,
+                            years: Math.round(months / 12.0 * 10) / 10
+                        })
+                    }
+
+                });
+
+                return heatmap;
             }
 
             // Create root and chart
@@ -56,7 +83,7 @@
             );
 
             polygonSeries.mapPolygons.template.setAll({
-                tooltipText: "{name} {value}"
+                tooltipText: "{name} {years}"
             });
 
             polygonSeries.set("heatRules", [{
@@ -67,7 +94,7 @@
                 key: "fill"
             }]);
 
-            polygonSeries.data.setAll(getRandomCountryHeatMap());
+            polygonSeries.data.setAll(getCountryHeatMap());
         </script>
     </body>
 </html>

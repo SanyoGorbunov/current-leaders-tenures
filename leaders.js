@@ -526,7 +526,7 @@ var leaders = [
     {
        "date":"1 January 2016",
        "leader":"Walter Thurnherr",
-       "state":"Federal Chancellor"
+       "state":"Switzerland"
     },
     {
        "date":"3 March 2016",
@@ -644,14 +644,9 @@ var leaders = [
        "state":"France"
     },
     {
-       "date":"14 May 2017",
-       "leader":"Andorra",
-       "state":"French Co-Prince"
-    },
-    {
        "date":"15 May 2017",
        "leader":"Patrick Strzoda",
-       "state":"Personal Representative of the French Co-Prince"
+       "state":"Andorra"
     },
     {
        "date":"29 June 2017",
@@ -831,7 +826,7 @@ var leaders = [
     {
        "date":"1 January 2019",
        "leader":"Karin Keller-Sutter",
-       "state":"Federal Councilor"
+       "state":"Switzerland"
     },
     {
        "date":"4 January 2019",
@@ -1076,7 +1071,7 @@ var leaders = [
     {
        "date":"28 February 2020",
        "leader":"Nuno Gomes Nabiam",
-       "state":"Prime Minister"
+       "state":"Guinea-Bissau"
     },
     {
        "date":"1 March 2020",
@@ -1101,7 +1096,7 @@ var leaders = [
     {
        "date":"24 April 2020",
        "leader":"Aleksander Ankvab",
-       "state":"Prime Minister"
+       "state":"Abkhazia"
     },
     {
        "date":"21 May 2020",
@@ -1141,7 +1136,7 @@ var leaders = [
     {
        "date":"2 August 2020",
        "leader":"Mark Phillips",
-       "state":"Prime Minister"
+       "state":"Guyana"
     },
     {
        "date":"6 August 2020",
@@ -1271,17 +1266,17 @@ var leaders = [
     {
        "date":"10 March 2021",
        "leader":"Musa al-Koni",
-       "state":"Presidential Council Member"
+       "state":"Libya"
     },
     {
        "date":"10 March 2021",
        "leader":"Abdullah al-Lafi",
-       "state":"Presidential Council Member"
+       "state":"Libya"
     },
     {
        "date":"15 March 2021",
        "leader":"Abdul Hamid Dbeibeh",
-       "state":"Prime Minister"
+       "state":"Libya"
     },
     {
        "date":"19 March 2021",
@@ -1311,7 +1306,7 @@ var leaders = [
     {
        "date":"3 April 2021",
        "leader":"Ouhoumoudou Mahamadou",
-       "state":"Prime Minister"
+       "state":"Niger"
     },
     {
        "date":"4 April 2021",
@@ -1461,7 +1456,7 @@ var leaders = [
     {
        "date":"2 October 2021",
        "leader":"Carlos Vila Nova",
-       "state":"São Tomé and Príncipe"
+       "state":"Sao Tome and Principe"
     },
     {
        "date":"4 October 2021",
@@ -1740,73 +1735,73 @@ var leaders = [
     },
     {
        "date":"8 September 2022",
-       "leader":"Australia",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Australia"
     },
     {
        "date":"8 September 2022",
-       "leader":"The Bahamas",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"The Bahamas"
     },
     {
        "date":"8 September 2022",
-       "leader":"Belize",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Belize"
     },
     {
        "date":"8 September 2022",
-       "leader":"Canada",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Canada"
     },
     {
        "date":"8 September 2022",
-       "leader":"Grenada",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Grenada"
     },
     {
        "date":"8 September 2022",
-       "leader":"Jamaica",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Jamaica"
     },
     {
        "date":"8 September 2022",
-       "leader":"New Zealand",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"New Zealand"
     },
     {
        "date":"8 September 2022",
-       "leader":"Papua New Guinea",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Papua New Guinea"
     },
     {
        "date":"8 September 2022",
-       "leader":"Saint Kitts and Nevis",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Saint Kitts and Nevis"
     },
     {
        "date":"8 September 2022",
-       "leader":"Saint Lucia",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Saint Lucia"
     },
     {
        "date":"8 September 2022",
-       "leader":"Saint Vincent and the Grenadines",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Saint Vincent and the Grenadines"
     },
     {
        "date":"8 September 2022",
-       "leader":"Solomon Islands",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Solomon Islands"
     },
     {
        "date":"8 September 2022",
-       "leader":"Tuvalu",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"Tuvalu"
     },
     {
        "date":"8 September 2022",
-       "leader":"United Kingdom",
-       "state":"King"
+       "leader":"Charles III",
+       "state":"United Kingdom"
     },
     {
        "date":"13 September 2022",
@@ -1895,7 +1890,7 @@ var leaders = [
     {
        "date":"11 November 2022",
        "leader":"Patrice Trovoada",
-       "state":"São Tomé and Príncipe"
+       "state":"Sao Tome and Principe"
     },
     {
        "date":"16 November 2022",
@@ -1970,7 +1965,7 @@ var leaders = [
     {
        "date":"1 January 2023",
        "leader":"Albert Rösti",
-       "state":"Federal Councilor"
+       "state":"Switzerland"
     },
     {
        "date":"5 January 2023",
